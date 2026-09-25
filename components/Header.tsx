@@ -24,6 +24,21 @@ export default function Header() {
         <div className="social-links">
           {isHome ? (
             <>
+            <a
+                href="https://neuronslimited-studios.itch.io/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link-item"
+              >
+                <img
+                  src="/assets/itch-io-logo.png"
+                  alt="itch.io"
+                  width={16}
+                  height={16}
+                  className="social-icon"
+                />
+                itch.io
+              </a>
               <a
                 href="https://www.youtube.com/@NeuronsLimitedStudios"
                 target="_blank"
