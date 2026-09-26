@@ -10,7 +10,7 @@ interface ProjectCardProps {
   /** Status tag text (e.g. "In Development", "Released on Google Play") */
   statusLabel: string;
   /** Status type determines the tag color */
-  statusType: "in-development" | "discontinued";
+  statusType: "in-development" | "released";
   /** Feature tags to display */
   features: string[];
   /** Project image path */

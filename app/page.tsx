@@ -11,7 +11,7 @@ export default function HomePage() {
           title="Down to Nothing"
           description="Everything ends up as nothing. You're just speeding it up. Made for Genial gamejam 2026 - Reach the Limit"
           statusLabel="Released on itch.io"
-          statusType="in-development"
+          statusType="released"
           features={["Game-Jam", "Action 2D", "Unique Story"]}
           image="/assets/downtonothing.png"
           imageAlt="Down to Nothing gameplay screenshot"
@@ -52,7 +52,7 @@ export default function HomePage() {
           title="Elite Safety"
           description="A mobile space tycoon developed using the Unity platform. Players build an empire by buying and mining asteroids and planets, each featuring unique minerals with randomized purity. Earnings are calculated dynamically based on mineral types, mine and refinery counts, and vital safety ratings. Safety is a core mechanic influenced by upgrades like protective helmets, safety alarms, oxygen tanks, and safety training. An updated was being worked on but was put aside to work on our next big game. Elite Safety is available to be downloaded on the Google Play Store."
           statusLabel="Released on Google Play"
-          statusType="discontinued"
+          statusType="released"
           features={["Management", "Mobile", "Space Tycoon"]}
           image="/assets/elitesafety.jpg"
           imageAlt="Elite Safety game screenshot"
