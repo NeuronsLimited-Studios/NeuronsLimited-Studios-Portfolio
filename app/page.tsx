@@ -8,18 +8,15 @@ export default function HomePage() {
 
       <section id="projects">
         <ProjectCard
-          title="Down to Nothing"
-          description="Everything ends up as nothing. You're just speeding it up. Made for Genial gamejam 2026 - Reach the Limit"
-          statusLabel="Released on itch.io"
-          statusType="released"
-          features={["Game-Jam", "Action 2D", "Unique Story"]}
-          image="/assets/downtonothing.png"
-          imageAlt="Down to Nothing gameplay screenshot"
+          title="Shrimps"
+          description="A fast-paced 2D multiplayer game where you control a heavily armed shrimp. Collect weapons spawning across the map, shoot opponents, and fight to survive. When unarmed, use a push mechanic to deflect bullets and shove enemies away. Every shrimp features unique abilities like a double jump, dash, or teleport. The last survivor wins the round before switching maps. Watch out for the water! Coming soon to Google Play."
+          statusLabel="IN DEVELOPMENT"
+          statusType="in-development"
+          features={["Multiplayer", "Action 2D", "Unique Abilities"]}
+          image="/assets/shrimps.jpg"
+          imageAlt="Shrimps gameplay screenshot"
           reversed
-          contentHoverImage="/assets/Placeholder-downtonothing.png"
-          downloadButtonImage="/assets/releaseditchbutton.png"
-          downloadButtonLink="https://neuronslimited-studios.itch.io/down-to-nothing"
-          downloadButtonAlt="Get it on itch.io"
+          contentHoverImage="/assets/Placeholder-shrimps.png"
         />
 
         <ProjectCard
@@ -37,15 +34,18 @@ export default function HomePage() {
         />
 
         <ProjectCard
-          title="Shrimps"
-          description="A fast-paced 2D multiplayer game where you control a heavily armed shrimp. Collect weapons spawning across the map, shoot opponents, and fight to survive. When unarmed, use a push mechanic to deflect bullets and shove enemies away. Every shrimp features unique abilities like a double jump, dash, or teleport. The last survivor wins the round before switching maps. Watch out for the water! Coming soon to Google Play."
-          statusLabel="IN DEVELOPMENT"
-          statusType="in-development"
-          features={["Multiplayer", "Action 2D", "Unique Abilities"]}
-          image="/assets/shrimps.jpg"
-          imageAlt="Shrimps gameplay screenshot"
+          title="Down to Nothing"
+          description="Everything ends up as nothing. You're just speeding it up. Made for Genial gamejam 2026 - Reach the Limit"
+          statusLabel="Released on itch.io"
+          statusType="released"
+          features={["Game-Jam", "Action 2D", "Unique Story"]}
+          image="/assets/downtonothing.png"
+          imageAlt="Down to Nothing gameplay screenshot"
           reversed
-          contentHoverImage="/assets/Placeholder-shrimps.png"
+          contentHoverImage="/assets/Placeholder-downtonothing.png"
+          downloadButtonImage="/assets/releaseditchbutton.png"
+          downloadButtonLink="https://neuronslimited-studios.itch.io/down-to-nothing"
+          downloadButtonAlt="Get it on itch.io"
         />
 
         <ProjectCard
