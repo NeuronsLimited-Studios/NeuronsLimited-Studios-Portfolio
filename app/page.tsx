@@ -35,15 +35,17 @@ export default function HomePage() {
 
         <ProjectCard
           title="Down to Nothing"
-          description="Everything ends up as nothing. You're just speeding it up. Made for Genial gamejam 2026 - Reach the Limit"
+          description={"Everything ends up as nothing. You're just speeding it up. \nMade for Genial gamejam 2026 - Reach the Limit"}
           statusLabel="Released on itch.io"
           statusType="released"
           features={["Game-Jam", "Action 2D", "Unique Story"]}
           image="/assets/downtonothing.png"
           imageAlt="Down to Nothing gameplay screenshot"
+          contain
           reversed
           contentHoverImage="/assets/Placeholder-downtonothing.png"
-          downloadButtonImage="/assets/releaseditchbutton.png"
+          downloadButtonImage="/assets/releaseditchbutton-trimmed.png"
+          downloadButtonHeight={70}
           downloadButtonLink="https://neuronslimited-studios.itch.io/down-to-nothing"
           downloadButtonAlt="Get it on itch.io"
         />

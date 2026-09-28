@@ -19,6 +19,8 @@ interface ProjectCardProps {
   imageAlt: string;
   /** Whether the image is portrait orientation (constrains width) */
   portrait?: boolean;
+  /** Show the whole image instead of cropping it (for images with a black background) */
+  contain?: boolean;
   /** Whether the layout is reversed (image on left, text on right) */
   reversed?: boolean;
   /** Optional download button image path (e.g. Google Play badge) */
@@ -27,6 +29,8 @@ interface ProjectCardProps {
   downloadButtonLink?: string;
   /** Alt text for the download button image */
   downloadButtonAlt?: string;
+  /** Height of the download button image in px (defaults to the CSS value) */
+  downloadButtonHeight?: number;
 
   contentHoverImage?: string;
 }
@@ -40,10 +44,12 @@ export default function ProjectCard({
   image,
   imageAlt,
   portrait = false,
+  contain = false,
   reversed = false,
   downloadButtonImage,
   downloadButtonLink,
   downloadButtonAlt = "Download on Google Play",
+  downloadButtonHeight,
   contentHoverImage,
 }: ProjectCardProps) {
   const bgRef = useRef<HTMLDivElement>(null);
@@ -92,7 +98,14 @@ export default function ProjectCard({
           )}
           <div className={`status-tag ${statusType}`}>{statusLabel}</div>
           <h2>{title}</h2>
-          <p className="description">{description}</p>
+          <p className="description">
+            {description.split("\n").map((line, i) => (
+              <span key={i}>
+                {i > 0 && <br />}
+                {line}
+              </span>
+            ))}
+          </p>
           <div className="features">
             {features.map((feature) => (
               <span key={feature}>{feature}</span>
@@ -108,11 +121,20 @@ export default function ProjectCard({
               <img
                 src={downloadButtonImage}
                 alt={downloadButtonAlt}
+                style={
+                  downloadButtonHeight
+                    ? { maxHeight: downloadButtonHeight }
+                    : undefined
+                }
               />
             </a>
           )}
         </div>
-        <div className={`project-image${portrait ? " portrait" : ""}`}>
+        <div
+          className={`project-image${portrait ? " portrait" : ""}${
+            contain ? " contain" : ""
+          }`}
+        >
           <img src={image} alt={imageAlt} />
         </div>
       </div>
