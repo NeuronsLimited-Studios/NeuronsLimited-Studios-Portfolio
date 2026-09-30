@@ -10,13 +10,16 @@ export default function HomePage() {
         <ProjectCard
           title="Shrimps"
           description="A fast-paced 2D multiplayer game where you control a heavily armed shrimp. Collect weapons spawning across the map, shoot opponents, and fight to survive. When unarmed, use a push mechanic to deflect bullets and shove enemies away. Every shrimp features unique abilities like a double jump, dash, or teleport. The last survivor wins the round before switching maps. Watch out for the water! Coming soon to Google Play."
-          statusLabel="IN DEVELOPMENT"
-          statusType="in-development"
+          statusLabel="Released on Google Play"
+          statusType="released"
           features={["Multiplayer", "Action 2D", "Unique Abilities"]}
           image="/assets/shrimps.jpg"
           imageAlt="Shrimps gameplay screenshot"
           reversed
           contentHoverImage="/assets/Placeholder-shrimps.png"
+          downloadButtonImage="/assets/googleplaydownloadbutton.png"
+          downloadButtonLink="https://play.google.com/store/apps/details?id=com.NeuronsLimitedStudios.Shrimps"
+          downloadButtonAlt="Get it on Google Play"
         />
 
         <ProjectCard
