@@ -17,7 +17,9 @@ export default function HomePage() {
           imageAlt="Shrimps gameplay screenshot"
           reversed
           contentHoverImage="/assets/Placeholder-shrimps.png"
-          downloadButtonImage="/assets/googleplaydownloadbutton.png"
+          contentHoverPosition="100% 40%"
+          downloadButtonImage="/assets/googleplaydownloadbutton-trimmed.png"
+          downloadButtonHeight={70}
           downloadButtonLink="https://play.google.com/store/apps/details?id=com.NeuronsLimitedStudios.Shrimps"
           downloadButtonAlt="Get it on Google Play"
         />
@@ -31,7 +33,8 @@ export default function HomePage() {
           image="/assets/carina.png"
           imageAlt="carina game screenshot"
           contentHoverImage="/assets/Placeholder-carina.png"
-          //downloadButtonImage="/assets/googleplaydownloadbutton.png"
+          //downloadButtonImage="/assets/googleplaydownloadbutton-trimmed.png"
+          //downloadButtonHeight={70}
           //downloadButtonLink="https://play.google.com/store/apps/details?id=com.NeuronsLimitedStudios.DirectiveCarina"
           //downloadButtonAlt="Get it on Google Play"
         />
@@ -63,7 +66,8 @@ export default function HomePage() {
           imageAlt="Elite Safety game screenshot"
           portrait
           contentHoverImage="/assets/Placeholder-elitesafety.png"
-          downloadButtonImage="/assets/googleplaydownloadbutton.png"
+          downloadButtonImage="/assets/googleplaydownloadbutton-trimmed.png"
+          downloadButtonHeight={70}
           downloadButtonLink="https://play.google.com/store/apps/details?id=com.NeuronsLimitedStudios.EliteSafety"
           downloadButtonAlt="Get it on Google Play"
         />

@@ -33,6 +33,8 @@ interface ProjectCardProps {
   downloadButtonHeight?: number;
 
   contentHoverImage?: string;
+  /** CSS background-position for the hover image (e.g. "100% 40%") */
+  contentHoverPosition?: string;
 }
 
 export default function ProjectCard({
@@ -51,6 +53,7 @@ export default function ProjectCard({
   downloadButtonAlt = "Download on Google Play",
   downloadButtonHeight,
   contentHoverImage,
+  contentHoverPosition,
 }: ProjectCardProps) {
   const bgRef = useRef<HTMLDivElement>(null);
   const strength = 15;
@@ -92,7 +95,10 @@ export default function ProjectCard({
             <div
               ref={bgRef}
               className="project-content-bg"
-              style={{ backgroundImage: `url(${contentHoverImage})` }}
+              style={{
+                backgroundImage: `url(${contentHoverImage})`,
+                backgroundPosition: contentHoverPosition,
+              }}
               aria-hidden="true"
             />
           )}
