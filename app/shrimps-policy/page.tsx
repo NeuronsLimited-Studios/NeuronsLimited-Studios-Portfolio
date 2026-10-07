@@ -12,7 +12,7 @@ export default function ShrimpsPolicyPage() {
       <h1>Privacy Policy</h1>
 
       <p>
-        <strong>Last Updated:</strong> June 30, 2026
+        <strong>Last Updated:</strong> October 7, 2026
       </p>
 
       <p>
@@ -37,7 +37,10 @@ export default function ShrimpsPolicyPage() {
       <p>
         The Application is built with Unity and uses Epic Online Services
         (&ldquo;EOS&rdquo;) to support authentication, online multiplayer
-        connectivity, and lobby management. Depending on how you use the
+        connectivity, and lobby management. The Application also integrates
+        Google Firebase, including Google Analytics for Firebase
+        (&ldquo;Firebase&rdquo;), to measure Application usage, stability, and
+        performance. Depending on how you use the
         Application, the following categories of information may be collected or
         processed:
       </p>
@@ -63,6 +66,19 @@ export default function ShrimpsPolicyPage() {
           address, and other technical information that may be processed by EOS
           or distribution platforms in order to provide online features,
           security, and basic service functionality.
+        </li>
+        <li>
+          <strong>Analytics and usage information:</strong> Through Firebase,
+          the Application may automatically collect a Firebase app instance
+          identifier, the mobile advertising identifier where available and
+          permitted by your device settings (such as the Android Advertising ID
+          or, on iOS, the IDFA only if you grant permission), device model and
+          brand, operating system and version, Application version, device
+          language, approximate location at country, region, or city level
+          derived from the IP address, first open and session start events,
+          session counts and duration, Application updates and removals, screen
+          views, engagement time, and similar usage statistics. Firebase does
+          not provide us with your name, email address, or precise location.
         </li>
         <li>
           <strong>Locally stored gameplay preferences:</strong> The nickname you
@@ -100,6 +116,10 @@ export default function ShrimpsPolicyPage() {
           functionality.
         </li>
         <li>
+          Automatically through Firebase when you open and use the
+          Application, including in the background of normal gameplay.
+        </li>
+        <li>
           Through local device storage used by the Application to remember
           gameplay preferences and settings between sessions.
         </li>
@@ -123,6 +143,11 @@ export default function ShrimpsPolicyPage() {
         </li>
         <li>Display player nicknames during online gameplay.</li>
         <li>Store gameplay preferences locally on your device.</li>
+        <li>
+          Understand how the Application is used, measure audience and
+          engagement in aggregated form, and identify technical issues,
+          crashes, or performance problems through Firebase.
+        </li>
         <li>
           Maintain service security, prevent abuse, debug errors, and protect
           integrity.
@@ -152,6 +177,13 @@ export default function ShrimpsPolicyPage() {
         <li>
           <strong>Epic Online Services:</strong> for authentication, lobby
           management, and online multiplayer functionality.
+        </li>
+        <li>
+          <strong>Google (Firebase):</strong> Google LLC and its affiliates, which
+          provide Firebase and Google Analytics for Firebase and process
+          analytics and usage information on our behalf as a service provider
+          and data processor, under the Firebase and Google Analytics data
+          processing terms.
         </li>
         <li>
           <strong>Platform and distribution providers:</strong> such as Google
@@ -202,6 +234,24 @@ export default function ShrimpsPolicyPage() {
             Google Privacy Policy
           </a>
         </li>
+        <li>
+          <a
+            href="https://firebase.google.com/support/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Firebase Privacy and Security
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://policies.google.com/technologies/partner-sites"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            How Google uses information from apps that use its services
+          </a>
+        </li>
       </ul>
 
       <h2>5. International Data Transfers</h2>
@@ -232,6 +282,14 @@ export default function ShrimpsPolicyPage() {
         obligations.
       </p>
 
+      <p>
+        Analytics data collected through Firebase is retained by Google in
+        accordance with the data retention settings configured for the
+        Application&apos;s Google Analytics property, after which user-level and
+        event-level data is automatically deleted. Aggregated reports that do
+        not identify you may be retained for longer.
+      </p>
+
       <h2>7. Security</h2>
 
       <p>
@@ -250,6 +308,16 @@ export default function ShrimpsPolicyPage() {
         deletion, restriction of processing, objection to certain processing,
         data portability where applicable, and withdrawal of consent where
         processing is based on consent.
+      </p>
+
+      <p>
+        You can limit the analytics information associated with your mobile
+        advertising identifier at any time through your device settings, for
+        example by resetting or deleting the Android Advertising ID, opting out
+        of ads personalization on Android, or declining or revoking App
+        Tracking permission on iOS. You may also contact us to request access
+        to, or deletion of, analytics data associated with your Firebase app
+        instance identifier.
       </p>
 
       <p>
@@ -275,6 +343,13 @@ export default function ShrimpsPolicyPage() {
         may use similar technologies, local storage, identifiers, logs, or
         equivalent mechanisms to support authentication, service delivery,
         security, and functionality.
+      </p>
+
+      <p>
+        In particular, Firebase stores an app instance identifier on your
+        device and may read the mobile advertising identifier, where available,
+        to measure Application usage. This identifier is reset if you clear the
+        Application&apos;s data or reinstall the Application.
       </p>
 
       <p>
