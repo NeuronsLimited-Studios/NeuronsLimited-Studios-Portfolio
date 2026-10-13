@@ -12,7 +12,7 @@ export default function ShrimpsPolicyPage() {
       <h1>Privacy Policy</h1>
 
       <p>
-        <strong>Last Updated:</strong> October 7, 2026
+        <strong>Last Updated:</strong> October 13, 2026
       </p>
 
       <p>
@@ -38,9 +38,12 @@ export default function ShrimpsPolicyPage() {
         The Application is built with Unity and uses Epic Online Services
         (&ldquo;EOS&rdquo;) to support authentication, online multiplayer
         connectivity, and lobby management. The Application also integrates
-        Google Firebase, including Google Analytics for Firebase
-        (&ldquo;Firebase&rdquo;), to measure Application usage, stability, and
-        performance. Depending on how you use the
+        Google Firebase (&ldquo;Firebase&rdquo;): Firebase Authentication and
+        Google Sign-In for player accounts, Cloud Firestore and Cloud Functions
+        for player profiles and purchases, and Google Analytics for Firebase to
+        measure Application usage, stability, and performance. In-app purchases
+        are processed by Google Play Billing. A player account is required to
+        play. Depending on how you use the
         Application, the following categories of information may be collected or
         processed:
       </p>
@@ -51,6 +54,33 @@ export default function ShrimpsPolicyPage() {
           player name chosen by you, room codes entered by you to join a
           session, and any information you provide when contacting us for
           support.
+        </li>
+        <li>
+          <strong>Account information:</strong> When you sign in with Google,
+          Firebase Authentication receives and stores your Google account email
+          address, display name, profile picture URL, and a unique Firebase
+          user ID assigned to your account. We do not receive or store your
+          Google password.
+        </li>
+        <li>
+          <strong>Player profile:</strong> Linked to your Firebase user ID, we
+          store the last nickname you used, your email address, and the time of
+          the last update, so that we can identify players, provide support,
+          and moderate the game. The profile may also contain information set
+          by us, such as a player tag shown next to your nickname (for example
+          a developer, supporter, or tester tag) and its color, and moderation
+          information such as the length and start time of an account
+          suspension.
+        </li>
+        <li>
+          <strong>Purchase information:</strong> When you make an in-app
+          purchase, Google Play processes the payment. We never receive your
+          payment card or bank details. We receive and store the product
+          purchased, the Google Play order ID, a one-way hashed version of the
+          purchase token, the purchase status (including refunds or
+          cancellations), the date the item was granted, and the items or
+          in-game currency owned by your account, so that purchases can be
+          verified, restored on other devices, and protected against fraud.
         </li>
         <li>
           <strong>Multiplayer and account-related information:</strong>
@@ -82,9 +112,11 @@ export default function ShrimpsPolicyPage() {
         </li>
         <li>
           <strong>Locally stored gameplay preferences:</strong> The nickname you
-          last used, the current saved player name, and your selected shrimp or
-          character choice stored locally on your device through Unity
-          PlayerPrefs.
+          last used, the current saved player name, your selected shrimp or
+          character choice, game settings, and a local copy of the end date of
+          any active account suspension, stored locally on your device through
+          Unity PlayerPrefs. Firebase Authentication also keeps you signed in by
+          storing a session token on your device.
         </li>
       </ul>
 
@@ -92,7 +124,8 @@ export default function ShrimpsPolicyPage() {
         Your chosen nickname may be displayed to other players during
         multiplayer gameplay. For that reason, you should not use sensitive
         personal information, a real full name, or other confidential
-        information as your nickname or room code.
+        information as your nickname or room code. Any player tag assigned to
+        your account is also visible to other players next to your nickname.
       </p>
 
       <p>
@@ -109,6 +142,10 @@ export default function ShrimpsPolicyPage() {
         <li>
           Directly from you when you choose a nickname, enter a room code, or
           contact us.
+        </li>
+        <li>
+          From Google when you sign in with your Google account, and from
+          Google Play when you make or refund an in-app purchase.
         </li>
         <li>
           Automatically through the Application and EOS when you authenticate,
@@ -137,6 +174,19 @@ export default function ShrimpsPolicyPage() {
         <li>Operate, provide, maintain, and improve the Application.</li>
         <li>
           Authenticate users and establish online multiplayer sessions.
+        </li>
+        <li>
+          Create and manage your player account and keep you signed in.
+        </li>
+        <li>
+          Verify in-app purchases with Google Play, deliver purchased items,
+          restore them when you sign in on another device, and remove them if a
+          purchase is refunded or cancelled.
+        </li>
+        <li>
+          Display player tags and enforce fair play, including suspending
+          accounts that cheat, abuse other players, use offensive nicknames, or
+          otherwise misuse the Application.
         </li>
         <li>
           Create, advertise, discover, join, and manage multiplayer lobbies.
@@ -180,10 +230,16 @@ export default function ShrimpsPolicyPage() {
         </li>
         <li>
           <strong>Google (Firebase):</strong> Google LLC and its affiliates, which
-          provide Firebase and Google Analytics for Firebase and process
-          analytics and usage information on our behalf as a service provider
-          and data processor, under the Firebase and Google Analytics data
-          processing terms.
+          provide Firebase Authentication, Cloud Firestore, Cloud Functions, and
+          Google Analytics for Firebase, and process account, profile,
+          purchase, analytics, and usage information on our behalf as a service
+          provider and data processor, under the Firebase and Google Analytics
+          data processing terms.
+        </li>
+        <li>
+          <strong>Google Play:</strong> for payment processing and purchase
+          verification of in-app purchases, under the Google Play terms and the
+          Google Privacy Policy.
         </li>
         <li>
           <strong>Platform and distribution providers:</strong> such as Google
@@ -275,6 +331,16 @@ export default function ShrimpsPolicyPage() {
       </p>
 
       <p>
+        Account, profile, and inventory data are kept for as long as your
+        account exists and are deleted when you delete your account. Records
+        of verified purchases may be kept after account deletion in a form no
+        longer linked to your account, to prevent fraud (such as reusing the
+        same purchase on another account), handle refunds, and comply with tax
+        and accounting obligations. Moderation information is kept for as long
+        as needed to enforce a suspension and prevent repeated abuse.
+      </p>
+
+      <p>
         Locally stored gameplay preferences may remain on your device until you
         remove the Application or clear the Application&apos;s local data.
         Information processed by third party platforms or service providers may
@@ -318,6 +384,21 @@ export default function ShrimpsPolicyPage() {
         Tracking permission on iOS. You may also contact us to request access
         to, or deletion of, analytics data associated with your Firebase app
         instance identifier.
+      </p>
+
+      <p>
+        <strong>Deleting your account:</strong> You can delete your account at
+        any time from inside the Application, in Settings, using the Delete
+        option under your signed-in account. This permanently deletes your
+        account, your player profile, and the items and currency linked to it.
+        Purchases cannot be restored after the account is deleted. If you can
+        no longer access the Application, you can request the deletion of your
+        account and related data by emailing us from the email address of the
+        account at{" "}
+        <a href="mailto:neuronslimitedstudios@gmail.com">
+          neuronslimitedstudios@gmail.com
+        </a>
+        ; we will process the request within 30 days.
       </p>
 
       <p>
