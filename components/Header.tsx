@@ -99,6 +99,25 @@ export default function Header() {
                 />
                 Buy Me A Coffee
               </a>
+              <a
+                href="https://mtre-consulting.it/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="partner-link"
+                aria-label="Partnered with M-Tre Consulting"
+              >
+                <img
+                  src="/assets/mtre-logo.png"
+                  alt="M-Tre Consulting Logo"
+                  width={28}
+                  height={28}
+                  className="partner-logo"
+                />
+                <span className="partner-text">
+                  <span className="partner-label">Partnered with</span>
+                  <span className="partner-name">M-Tre Consulting</span>
+                </span>
+              </a>
             </>
           ) : (
             <Link href="/" className="back-btn">
