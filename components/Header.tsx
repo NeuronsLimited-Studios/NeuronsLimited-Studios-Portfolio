@@ -2,13 +2,29 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  // Hide the header while scrolling down, show it again when scrolling up
+  useEffect(() => {
+    const onScroll = () => {
+      const y = window.scrollY;
+      const delta = y - lastScrollY.current;
+      if (Math.abs(delta) < 5) return;
+      setHidden(delta > 0 && y > 80);
+      lastScrollY.current = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header>
+    <header className={hidden ? "header-hidden" : undefined}>
       <nav>
         <Link href="/" className="logo" aria-label="NeuronsLimited Studios Home">
           <img
