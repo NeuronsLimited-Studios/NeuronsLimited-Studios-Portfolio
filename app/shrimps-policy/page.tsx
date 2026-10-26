@@ -12,7 +12,7 @@ export default function ShrimpsPolicyPage() {
       <h1>Privacy Policy</h1>
 
       <p>
-        <strong>Last Updated:</strong> October 13, 2026
+        <strong>Last Updated:</strong> October 26, 2026
       </p>
 
       <p>
@@ -38,8 +38,8 @@ export default function ShrimpsPolicyPage() {
         The Application is built with Unity and uses Epic Online Services
         (&ldquo;EOS&rdquo;) to support authentication, online multiplayer
         connectivity, and lobby management. The Application also integrates
-        Google Firebase (&ldquo;Firebase&rdquo;): Firebase Authentication and
-        Google Sign-In for player accounts, Cloud Firestore and Cloud Functions
+        Google Firebase (&ldquo;Firebase&rdquo;): Firebase Authentication,
+        Google Play Games Services, and Google Sign-In for player accounts, Cloud Firestore and Cloud Functions
         for player profiles and purchases, and Google Analytics for Firebase to
         measure Application usage, stability, and performance. In-app purchases
         are processed by Google Play Billing. A player account is required to
@@ -59,7 +59,11 @@ export default function ShrimpsPolicyPage() {
           <strong>Account information:</strong> When you sign in with Google,
           Firebase Authentication receives and stores your Google account email
           address, display name, profile picture URL, and a unique Firebase
-          user ID assigned to your account. We do not receive or store your
+          user ID assigned to your account. On Android, when you sign in with
+          Google Play Games Services, Firebase Authentication receives your
+          Play Games player ID, gamer name, and avatar URL (Play Games does not
+          share your email address with us). If you use both sign-in methods,
+          they are linked to the same account. We do not receive or store your
           Google password.
         </li>
         <li>
@@ -70,7 +74,8 @@ export default function ShrimpsPolicyPage() {
           by us, such as a player tag shown next to your nickname (for example
           a developer, supporter, or tester tag) and its color, and moderation
           information such as the length and start time of an account
-          suspension.
+          suspension, and the list of cosmetic items (skins) owned by your
+          account, whether purchased or granted by us.
         </li>
         <li>
           <strong>Purchase information:</strong> When you make an in-app
@@ -81,6 +86,9 @@ export default function ShrimpsPolicyPage() {
           cancellations), the date the item was granted, and the items or
           in-game currency owned by your account, so that purchases can be
           verified, restored on other devices, and protected against fraud.
+          When you start a purchase, we attach a one-way hashed version of your
+          user ID to the Google Play order, so that the purchase can only be
+          redeemed by the account that made it.
         </li>
         <li>
           <strong>Multiplayer and account-related information:</strong>
@@ -114,8 +122,9 @@ export default function ShrimpsPolicyPage() {
           <strong>Locally stored gameplay preferences:</strong> The nickname you
           last used, the current saved player name, your selected shrimp or
           character choice, game settings, and a local copy of the end date of
-          any active account suspension, stored locally on your device through
-          Unity PlayerPrefs. Firebase Authentication also keeps you signed in by
+          any active account suspension, the skin you selected for each shrimp,
+          and a cached copy of the items owned by your account, stored locally
+          on your device through Unity PlayerPrefs. Firebase Authentication also keeps you signed in by
           storing a session token on your device.
         </li>
       </ul>
@@ -144,7 +153,8 @@ export default function ShrimpsPolicyPage() {
           contact us.
         </li>
         <li>
-          From Google when you sign in with your Google account, and from
+          From Google when you sign in with your Google account or with Google
+          Play Games Services, and from
           Google Play when you make or refund an in-app purchase.
         </li>
         <li>
@@ -230,8 +240,8 @@ export default function ShrimpsPolicyPage() {
         </li>
         <li>
           <strong>Google (Firebase):</strong> Google LLC and its affiliates, which
-          provide Firebase Authentication, Cloud Firestore, Cloud Functions, and
-          Google Analytics for Firebase, and process account, profile,
+          provide Firebase Authentication, Google Play Games Services, Cloud
+          Firestore, Cloud Functions, and Google Analytics for Firebase, and process account, profile,
           purchase, analytics, and usage information on our behalf as a service
           provider and data processor, under the Firebase and Google Analytics
           data processing terms.
