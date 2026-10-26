@@ -12,7 +12,7 @@ export default function PolicyPage() {
       <h1>Privacy &amp; Cookie Policy</h1>
 
       <p>
-        <strong>Last Updated:</strong> June 8, 2026
+        <strong>Last Updated:</strong> October 26, 2026
       </p>
 
       <p>
@@ -141,8 +141,12 @@ export default function PolicyPage() {
       </ul>
 
       <p>
-        You can control or disable cookies through your browser settings.
-        Disabling cookies may affect website functionality.
+        Analytics cookies are set by Google Analytics only after you accept
+        them in the cookie banner shown on your first visit. If you reject
+        them, no analytics cookies are set. You can change your choice at any
+        time with the &ldquo;Cookie settings&rdquo; link at the bottom of every
+        page, and you can also control or delete cookies through your browser
+        settings.
       </p>
 
       <h2>7. Third-Party Services and Links</h2>

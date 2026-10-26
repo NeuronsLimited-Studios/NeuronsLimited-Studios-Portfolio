@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { OPEN_EVENT } from "@/components/CookieConsent";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -21,6 +22,14 @@ export default function Footer() {
           <Link href="/terms">Terms of Service</Link>
         </div>
       )}
+      <div className="legal-links">
+        <button
+          className="cookie-settings-link"
+          onClick={() => window.dispatchEvent(new Event(OPEN_EVENT))}
+        >
+          Cookie settings
+        </button>
+      </div>
     </footer>
   );
 }

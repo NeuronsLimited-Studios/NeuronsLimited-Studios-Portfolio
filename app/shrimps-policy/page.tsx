@@ -108,15 +108,15 @@ export default function ShrimpsPolicyPage() {
         <li>
           <strong>Analytics and usage information:</strong> Through Firebase,
           the Application may automatically collect a Firebase app instance
-          identifier, the mobile advertising identifier where available and
-          permitted by your device settings (such as the Android Advertising ID
-          or, on iOS, the IDFA only if you grant permission), device model and
+          identifier, device model and
           brand, operating system and version, Application version, device
           language, approximate location at country, region, or city level
           derived from the IP address, first open and session start events,
           session counts and duration, Application updates and removals, screen
           views, engagement time, and similar usage statistics. Firebase does
           not provide us with your name, email address, or precise location.
+          The Application does not show ads and does not collect your mobile
+          advertising identifier (Android Advertising ID or IDFA).
         </li>
         <li>
           <strong>Locally stored gameplay preferences:</strong> The nickname you
@@ -387,13 +387,10 @@ export default function ShrimpsPolicyPage() {
       </p>
 
       <p>
-        You can limit the analytics information associated with your mobile
-        advertising identifier at any time through your device settings, for
-        example by resetting or deleting the Android Advertising ID, opting out
-        of ads personalization on Android, or declining or revoking App
-        Tracking permission on iOS. You may also contact us to request access
-        to, or deletion of, analytics data associated with your Firebase app
-        instance identifier.
+        You can reset the analytics identifier at any time by clearing the
+        Application&apos;s data or reinstalling it. You may also contact us to
+        request access to, or deletion of, analytics data associated with your
+        Firebase app instance identifier.
       </p>
 
       <p>
@@ -438,8 +435,8 @@ export default function ShrimpsPolicyPage() {
 
       <p>
         In particular, Firebase stores an app instance identifier on your
-        device and may read the mobile advertising identifier, where available,
-        to measure Application usage. This identifier is reset if you clear the
+        device to measure Application usage; it does not read the mobile
+        advertising identifier. This identifier is reset if you clear the
         Application&apos;s data or reinstall the Application.
       </p>
 

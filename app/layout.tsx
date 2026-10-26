@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -70,22 +71,14 @@ export default function RootLayout({
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
             rel="stylesheet"
           />
-          {/* Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-M0H06BQMGY"></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-M0H06BQMGY');`,
-          }}
-          />
+          {/* Google Analytics is loaded by CookieConsent, only after the visitor accepts */}
         </head>
       <body>
         <Header />
         <main className="page-enter">{children}</main>
         <Footer />
         <ScrollToTop />
+        <CookieConsent />
       </body>
     </html>
   );
