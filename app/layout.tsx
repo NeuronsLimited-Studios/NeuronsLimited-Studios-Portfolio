@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: "%s | NeuronsLimited Studios",
   },
   description:
-    "Indie game development studio crafting quirky, silly, and genuinely fun gaming experiences. Creators of Shrimps and Elite Safety.",
+    "Indie game development studio crafting quirky, silly, and genuinely fun gaming experiences. Creators of Shrimps, Elite Safety, Down to Nothing and Directive: Carina.",
   keywords: [
     "indie games",
     "game development",
@@ -66,9 +66,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-          {/* Google Fonts — exactly as the original site */}
+          {/* Google Fonts: Inter (as the original site) + display, mono and pixel faces for the game pages */}
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;700&family=Silkscreen:wght@400;700&display=swap"
             rel="stylesheet"
           />
           {/* Google Analytics is loaded by CookieConsent, only after the visitor accepts */}
