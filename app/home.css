@@ -1321,9 +1321,9 @@ kbd {
 }
 
 .catalogue .dyson .dyson-star {
-  inset: 14%;
-  width: 72%;
-  height: 72%;
+  inset: -22%;
+  width: 144%;
+  height: 144%;
 }
 
 .catalogue .dyson .dyson-frame {
