@@ -785,11 +785,47 @@ kbd {
   padding-block: 4vh 10vh;
 }
 
-.john-sprite {
+.john-figure {
+  position: relative;
   width: clamp(130px, 16vw, 200px);
   flex-shrink: 0;
   animation: john 3.4s ease-in-out infinite;
   transform-origin: bottom center;
+}
+
+.john-sprite {
+  display: block;
+  width: 100%;
+}
+
+/* Hardhat on John's head: falls off on "My hat fell off", drops back on "There we go" */
+.john-hat {
+  position: absolute;
+  left: 15%;
+  top: -9%;
+  width: 70%;
+  transform: rotate(-4deg);
+  transform-origin: 50% 100%;
+}
+
+.john-hat.falls {
+  animation: hat-falls 0.9s cubic-bezier(0.5, 0, 0.8, 0.4) forwards;
+}
+
+.john-hat.back {
+  animation: hat-back 0.7s cubic-bezier(0.3, 1.6, 0.5, 1) both;
+}
+
+@keyframes hat-falls {
+  0% { transform: rotate(-4deg); opacity: 1; }
+  25% { transform: translate(8%, -25%) rotate(10deg); opacity: 1; }
+  100% { transform: translate(60%, 260%) rotate(150deg); opacity: 0; }
+}
+
+@keyframes hat-back {
+  0% { transform: translateY(-160%) rotate(-12deg); opacity: 0; }
+  40% { opacity: 1; }
+  100% { transform: rotate(-4deg); opacity: 1; }
 }
 
 @keyframes john {
@@ -1266,6 +1302,39 @@ kbd {
 }
 
 .catalogue figure:hover img {
+  transform: scale(1.2);
+}
+
+/* Dyson Sphere: the frame around a star */
+.catalogue .dyson {
+  position: relative;
+  display: inline-block;
+  width: min(84px, 100%);
+  aspect-ratio: 1;
+}
+
+.catalogue .dyson img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.catalogue .dyson .dyson-star {
+  inset: 14%;
+  width: 72%;
+  height: 72%;
+}
+
+.catalogue .dyson .dyson-frame {
+  transform: scale(1.35);
+}
+
+.catalogue figure:hover .dyson .dyson-frame {
+  transform: scale(1.6);
+}
+
+.catalogue figure:hover .dyson img {
   transform: scale(1.2);
 }
 

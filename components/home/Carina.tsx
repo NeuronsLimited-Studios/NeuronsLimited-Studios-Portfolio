@@ -362,7 +362,7 @@ export default function Carina() {
             <img src="/assets/discord.png" alt="" /> Join the Discord
           </a>
           <a href={LINKS.youtube} target="_blank" rel="noopener noreferrer">
-            YouTube
+            <img src="/assets/youtube.svg" alt="" /> YouTube
           </a>
           <a href={LINKS.instagram} target="_blank" rel="noopener noreferrer">
             <img src="/assets/Instagram.svg" alt="" /> Instagram

@@ -6,7 +6,9 @@ import { StoreBadge } from "./ui";
 
 const E = "/assets/games/elite";
 
-// John Safety's actual tutorial lines from the game
+// John Safety's actual tutorial lines from the game. HAT_FALLS is the line where his hardhat
+// falls off; on the next one ("There we go") it drops back on his head.
+const HAT_FALLS = 2;
 const JOHN_LINES = [
   "Running a mining company is no easy task. So, what are we waiting for? Let's get started!",
   "This is the Safety Meter. It is very important this always stays hig-",
@@ -169,7 +171,16 @@ export default function EliteSafety() {
 
       {/* ── John Safety ─────────────────────────── */}
       <div className="john" data-reveal>
-        <img src={`${E}/johnsafety.png`} alt="John Safety" className="pixel john-sprite" />
+        <div className="john-figure">
+          <img src={`${E}/johnsafety.png`} alt="John Safety" className="pixel john-sprite" />
+          {/* key restarts the animation every time the hat changes state */}
+          <img
+            key={line === HAT_FALLS ? "falls" : line === HAT_FALLS + 1 ? "back" : "on"}
+            src={`${E}/hardhat.png`}
+            alt=""
+            className={`pixel john-hat ${line === HAT_FALLS ? "falls" : line === HAT_FALLS + 1 ? "back" : ""}`}
+          />
+        </div>
         <button
           className="speech"
           onClick={() => setLine((l) => (l + 1) % JOHN_LINES.length)}
@@ -309,7 +320,15 @@ export default function EliteSafety() {
         <div className="catalogue-row">
           {BODIES.map((b, i) => (
             <figure key={b.name} style={{ animationDelay: `${i * -0.7}s` }}>
-              <img src={`${E}/${b.icon}.png`} alt="" className="pixel" />
+              {b.icon === "dysonspere" ? (
+                // The sphere is only the frame: in the game it wraps a star.
+                <span className="dyson">
+                  <img src={`${E}/yellowstar.png`} alt="" className="pixel dyson-star" />
+                  <img src={`${E}/${b.icon}.png`} alt="" className="pixel dyson-frame" />
+                </span>
+              ) : (
+                <img src={`${E}/${b.icon}.png`} alt="" className="pixel" />
+              )}
               <figcaption>{b.name}</figcaption>
             </figure>
           ))}
