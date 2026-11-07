@@ -7,7 +7,8 @@ import { StatBar, StoreBadge } from "./ui";
 
 const S = "/assets/games/shrimps";
 
-// Values from the shrimp prefabs in the game
+// Values from the shrimp prefabs in the game, in the same order as the in-game selector
+// (unlock = account level needed; 1 = available from the start).
 const ROSTER = [
   {
     name: "Classic",
@@ -15,6 +16,7 @@ const ROSTER = [
     skin: { name: "Posh Classic", sprite: "poshclassic" },
     ability: "Double Jump",
     anim: "double-jump",
+    unlock: 1,
     speed: 10,
     jump: 9,
     hp: 100,
@@ -26,21 +28,11 @@ const ROSTER = [
     skin: { name: "Tuna Nigiri", sprite: "tunanigiri" },
     ability: "Dash",
     anim: "dash",
+    unlock: 1,
     speed: 11.5,
     jump: 8.5,
     hp: 100,
     text: "The fastest shrimp on the ice, and it brought its own rice. Dashes through gaps, bullets and bad decisions.",
-  },
-  {
-    name: "Tempura",
-    sprite: "tempura",
-    skin: { name: "Sauced Tempura", sprite: "saucedtempura" },
-    ability: "Teleport",
-    anim: "teleport",
-    speed: 10,
-    jump: 8.5,
-    hp: 100,
-    text: "Blinks six units ahead in a puff of cyan smoke. Perfect for skipping a gap, or a grenade.",
   },
   {
     name: "Blue Lobster",
@@ -48,10 +40,23 @@ const ROSTER = [
     skin: null,
     ability: "Low Gravity",
     anim: "float",
+    unlock: 10,
     speed: 10,
     jump: 8.5,
     hp: 100,
     text: "Technically not a shrimp. Nobody has dared tell it. Falls slower and floats longer than everyone else.",
+  },
+  {
+    name: "Tempura",
+    sprite: "tempura",
+    skin: { name: "Sauced Tempura", sprite: "saucedtempura" },
+    ability: "Teleport",
+    anim: "teleport",
+    unlock: 30,
+    speed: 10,
+    jump: 8.5,
+    hp: 100,
+    text: "Blinks six units ahead in a puff of cyan smoke. Perfect for skipping a gap, or a grenade.",
   },
   {
     name: "Krill",
@@ -59,10 +64,11 @@ const ROSTER = [
     skin: null,
     ability: "Decoy",
     anim: "decoy",
+    unlock: 50,
     speed: 10,
     jump: 8.5,
     hp: 85,
-    text: "Smallest of the bunch. Mid-air, it spawns an identical decoy (same weapon, same health) that fights on its own.",
+    text: "Smallest of the bunch. Mid-air, it spawns an identical decoy with the same weapon: it draws the fire, but its shots don't hurt anyone.",
   },
 ] as const;
 
@@ -155,7 +161,8 @@ export default function Shrimps() {
           A real-time PvP platformer for up to four players online. Open a
           private room with a code or jump into a quick match, pick your shrimp
           and fight on maps that move under your feet. The last survivor takes
-          the round, then everyone moves on to the next map.
+          the round, then everyone moves on to the next map. Every kill, combo
+          and win earns XP: climb up to level 100 to unlock new shrimps.
         </p>
         <div className="rule-grid">
           {RULES.map((r, i) => (
@@ -205,6 +212,7 @@ export default function Shrimps() {
 
             <div className="roster-info" key={`info-${pick}`}>
               <span className="ability-pill">Ability · {shrimp.ability}</span>
+              {shrimp.unlock > 1 && <span className="ability-pill">Unlocks at level {shrimp.unlock}</span>}
               <h4>{skin && shrimp.skin ? shrimp.skin.name : shrimp.name}</h4>
               <p>{shrimp.text}</p>
               <div className="roster-stats">

@@ -2711,6 +2711,12 @@ kbd {
   color: #fff;
   background: #ff5a4e;
 }
+/* Second pill (level needed to unlock the shrimp) */
+.ability-pill + .ability-pill {
+  margin-left: 8px;
+  color: #1a1400;
+  background: #ffc83d;
+}
 
 .roster-info h4 {
   font-family: var(--display);
